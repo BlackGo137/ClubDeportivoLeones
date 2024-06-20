@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ClubDeportivoLeones.Models.Pago>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <link href="~/css/csusuarios/index.css" rel="stylesheet" />
+</head>
+<h1>Registro de pagos</h1>
+<div class="table-container">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NroRecibo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Anio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cliente)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NroRecibo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Anio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Usuario!.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cliente!.Info)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.ID">Recibo</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<p>
+    <a asp-action="Create">Registrar nuevo pago</a>
+</p>
+</div>

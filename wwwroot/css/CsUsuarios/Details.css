@@ -1,0 +1,60 @@
+﻿/* Estilos para el contenedor de detalles */
+.details-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .details-container h4 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        color: #333;
+    }
+
+    .details-container hr {
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-color: #ddd;
+    }
+
+    .details-container dl {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 10px;
+    }
+
+    .details-container dt {
+        font-weight: bold;
+        color: #555;
+    }
+
+    .details-container dd {
+        margin-left: 0;
+        color: #333;
+    }
+
+/* Estilos para los enlaces de acción */
+.action-links {
+    margin-top: 15px;
+}
+
+    .action-links a {
+        text-decoration: none;
+        color: #007bff;
+        margin-right: 10px;
+        transition: color 0.3s ease;
+    }
+
+        .action-links a:hover {
+            color: #0056b3;
+        }
+h1 {
+    color: #2c3e50;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+}

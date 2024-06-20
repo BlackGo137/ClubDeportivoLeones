@@ -1,0 +1,60 @@
+﻿@model ClubDeportivoLeones.Models.Cliente
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Cliente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CI" class="control-label"></label>
+                <input asp-for="CI" class="form-control" type="text" />
+                <span asp-validation-for="CI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaNacimiento" class="control-label"></label>
+                <input asp-for="FechaNacimiento" class="form-control" type="date" />
+                <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NroCelular" class="control-label"></label>
+                <input asp-for="NroCelular" class="form-control" type="tel" />
+                <span asp-validation-for="NroCelular" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MontoDeRegistro" class="control-label"></label>
+                <input asp-for="MontoDeRegistro" class="form-control" type="number" step="0.01" value ="900" />
+                <span asp-validation-for="MontoDeRegistro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaDeRegistro" class="control-label"></label>
+                <input asp-for="FechaDeRegistro" class="form-control" type="datetime-local" />
+                <span asp-validation-for="FechaDeRegistro" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IDPersonal" class="control-label"></label>
+                <input asp-for="IDPersonal" class="form-control" type="text" />
+                <span asp-validation-for="IDPersonal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

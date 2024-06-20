@@ -1,0 +1,57 @@
+﻿@model ClubDeportivoLeones.Models.Horario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Horario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Dia" class="control-label"></label>
+                <select asp-for="Dia" class="form-control select2" required>
+                    <option value="">Seleccione..</option>
+                    <option value="1">Lunes</option>
+                    <option value="2">Martes</option>
+                    <option value="3">Miércoles</option>
+                    <option value="4">Jueves</option>
+                    <option value="5">Viernes</option>
+                    <option value="6">Sábado</option>
+                </select>
+                <span asp-validation-for="Dia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hora" class="control-label">Hora</label>
+                <select asp-for="Hora" class="form-control select2" required>
+                    <option value="">Seleccione un horario</option>
+                    <option value="09:00 - 12:00 [am]">09:00 - 12:00 [am]</option>
+                    <option value="14:00 - 17:00 [pm]">14:00 - 17:00 [pm]</option>
+                    <!-- Agrega más opciones de horarios si es necesario -->
+                </select>
+                <span asp-validation-for="Hora" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PersonalID" class="control-label"></label>
+                <select asp-for="PersonalID" class ="form-control" asp-items="ViewBag.PersonalID"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClienteID" class="control-label"></label>
+                <select asp-for="ClienteID" class ="form-control" asp-items="ViewBag.ClienteID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

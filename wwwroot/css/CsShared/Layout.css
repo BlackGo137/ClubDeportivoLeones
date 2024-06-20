@@ -1,0 +1,13 @@
+﻿.nav-link {
+    color: #6c757d !important; /* Color del texto gris */
+    background-color: transparent !important; /* Fondo transparente */
+    border-color: #6c757d !important; /* Borde gris */
+    border-width: 1px; /* Ancho del borde */
+    padding: 0.5rem 1rem !important; /* Espaciado interno */
+}
+
+    .nav-link:hover {
+        color: #007bff !important; /* Cambio de color al pasar el mouse */
+        background-color: #f8f9fa !important; /* Cambio de fondo al pasar el mouse */
+        border-color: #007bff !important; /* Cambio de borde al pasar el mouse */
+    }
